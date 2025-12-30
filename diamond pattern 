@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int rows;
+
+    // Ask the user to input the number of rows (half of the diamond)
+
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
+
+    // Upper half of the diamond (pyramid)
+
+    for (int i = 1; i <= rows; i++) {
+        // Print spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+
+        // Print stars
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    // Lower half of the diamond (inverted pyramid)
+    for (int i = rows - 1; i >= 1; i--) {
+        // Print spaces
+
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+
+        // Print stars
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            printf("*");
+
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
