@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int size;
+
+    // Ask the user to input the size of the square
+    printf("Enter the size of the square: ");
+    scanf("%d", &size);
+
+
+    // Loop through each row
+    for (int i = 1; i <= size; i++) {
+        // Loop through each column
+        for (int j = 1; j <= size; j++) {
+            // Print stars at the border, and spaces inside the square
+            if (i == 1 || i == size || j == 1 || j == size) {
+                printf("*");
+            } else {
+                printf(" ");
+
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
