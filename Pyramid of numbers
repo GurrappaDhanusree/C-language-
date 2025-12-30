@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int rows;
+
+    // Ask the user to input the number of rows
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
+
+    // Loop through each row
+    for (int i = 1; i <= rows; i++) {
+        // Print spaces for alignment
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+       
+        // Print the increasing part of the row
+        for (int j = 1; j <= i; j++) {
+            printf("%d", j);
+        }
+       
+        // Print the decreasing part of the row
+        for (int j = i - 1; j >= 1; j--) {
+            printf("%d", j);
+        }
+       
+        /
+/ Move to the next line
+
+        printf("\n");
+    }
+
+    return 0;
+}
